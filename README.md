@@ -2,7 +2,7 @@
 
 A modern, feature-rich multi-client chat application built with Java 21, featuring both command-line and graphical user interfaces.
 
-## 🚀 Features
+## Features
 
 - **Multi-Client Support**: Handle up to 50 concurrent connections
 - **Dual Interface**: Both CLI and GUI implementations for server and client
@@ -14,13 +14,13 @@ A modern, feature-rich multi-client chat application built with Java 21, featuri
 - **Well-Tested**: Comprehensive unit tests with JUnit 5
 - **Professional Logging**: SLF4J with Logback for structured logging
 
-## 📋 Requirements
+## Requirements
 
 - **Java 21 LTS** or higher
 - **Maven 3.9+** (for building)
 - **Network**: Local network or localhost for testing
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 chat_app/
@@ -49,55 +49,55 @@ chat_app/
 └── README.md
 ```
 
-## 🔧 Building
+## Building
 
 ### Compile the Project
 
 ```powershell
 mvn clean compile
-## Features
+```
 
-## Requirements
+### Run Tests
 
-## Project Structure
+```powershell
 mvn test
-## Building
+```
+
+### Package as Executable JAR
+
+```powershell
+mvn clean package
+```
+
+This creates `chat-application-2.0.0.jar` in the `target/` directory with all dependencies included.
 
 ## Running the Application
 
-## Commands
-mvn clean package
-## Configuration
+### GUI Server (Recommended)
 
-## Architecture
-
-## Testing
-
-## Modern Java 21 Features Used
-
-## Logging
+```powershell
 mvn exec:java -Dexec.mainClass="com.chatapp.ui.ServerUI"
-## Troubleshooting
+```
 
-## Best Practices Implemented
+Or run the packaged JAR:
 
-## Performance
+```powershell
 java -jar target/chat-application-2.0.0.jar
-## Security Considerations
+```
 
-## Further Reading
+**Steps:**
 1. Click "Start Server"
-## Contributing
+2. Note the port number displayed
 3. Share this port with clients
-## License
+
 ### GUI Client
-## Author
-**Enjoy chatting!**
-- Message record creation and formatting
-- Configuration loading and defaults
-- Server lifecycle (start/stop)
-- Client connection and disconnection
-- Auto-closeable resource management
+
+```powershell
+mvn exec:java -Dexec.mainClass="com.chatapp.ui.ClientUI"
+```
+
+**Steps:**
+1. Enter server hostname (default: localhost)
 2. Enter the server port
 3. Choose a unique username
 4. Click "Connect"
@@ -119,7 +119,7 @@ mvn exec:java -Dexec.mainClass="com.chatapp.client.ChatClientCLI" -Dexec.args="l
 
 Arguments: `<host> <port>`
 
-## 📝 Usage Examples
+## Usage Examples
 
 ### Example: Start Server and Connect Two Clients
 
@@ -142,7 +142,7 @@ java -cp target/chat-application-2.0.0.jar com.chatapp.client.ChatClientCLI loca
 # Enter username: Bob
 ```
 
-## 🎯 Commands
+## Commands
 
 ### In Chat
 
@@ -150,7 +150,7 @@ java -cp target/chat-application-2.0.0.jar com.chatapp.client.ChatClientCLI loca
 - `/quit` - Disconnect from the server
 - All messages are broadcast to all connected clients
 
-## ⚙️ Configuration
+## Configuration
 
 Edit `src/main/resources/application.properties`:
 
@@ -169,7 +169,7 @@ chat.client.reconnect.attempts=3
 chat.client.reconnect.delay=2000
 ```
 
-## 🏛️ Architecture
+## Architecture
 
 ### Server Architecture
 
@@ -205,7 +205,7 @@ ChatClient
 - Consumer-based message callbacks
 - Automatic resource cleanup
 
-## 🧪 Testing
+## Testing
 
 Run all tests:
 
@@ -227,13 +227,13 @@ mvn clean test jacoco:report
 
 ### Test Coverage
 
-- ✅ Message record creation and formatting
-- ✅ Configuration loading and defaults
-- ✅ Server lifecycle (start/stop)
-- ✅ Client connection and disconnection
-- ✅ Auto-closeable resource management
+- Message record creation and formatting
+- Configuration loading and defaults
+- Server lifecycle (start/stop)
+- Client connection and disconnection
+- Auto-closeable resource management
 
-## 📊 Modern Java 21 Features Used
+## Modern Java 21 Features Used
 
 | Feature | Usage |
 |---------|-------|
@@ -245,7 +245,7 @@ mvn clean test jacoco:report
 | **Enhanced Switch** | Modern switch expressions |
 | **Try-with-Resources** | Automatic resource management |
 
-## 🔍 Logging
+## Logging
 
 Logs are written to:
 - **Console**: Real-time output with timestamps
@@ -253,7 +253,7 @@ Logs are written to:
 
 Configure logging in `src/main/resources/logback.xml`.
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Port Already in Use
 
@@ -281,27 +281,27 @@ mvn clean install -U
 mvn clean package -DskipTests
 ```
 
-## 🚦 Best Practices Implemented
+## Best Practices Implemented
 
-- ✅ Proper exception handling with try-with-resources
-- ✅ Thread-safe concurrent collections
-- ✅ Immutable data structures (records)
-- ✅ Comprehensive JavaDoc documentation
-- ✅ Unit tests for core functionality
-- ✅ Logging instead of System.out
-- ✅ Configuration externalization
-- ✅ Graceful shutdown hooks
-- ✅ Resource cleanup (AutoCloseable)
-- ✅ Modern Maven project structure
+- Proper exception handling with try-with-resources
+- Thread-safe concurrent collections
+- Immutable data structures (records)
+- Comprehensive JavaDoc documentation
+- Unit tests for core functionality
+- Logging instead of System.out
+- Configuration externalization
+- Graceful shutdown hooks
+- Resource cleanup (AutoCloseable)
+- Modern Maven project structure
 
-## 📈 Performance
+## Performance
 
 - **Scalability**: Handles 50+ concurrent clients efficiently with virtual threads
 - **Memory**: Lightweight footprint (~50MB typical usage)
 - **Latency**: Sub-millisecond message broadcasting
 - **CPU**: Minimal overhead with virtual threads
 
-## 🔐 Security Considerations
+## Security Considerations
 
 > **Note**: This is a demonstration application. For production use, consider:
 
@@ -311,14 +311,14 @@ mvn clean package -DskipTests
 - Rate limiting and DoS protection
 - Secure configuration management
 
-## 📚 Further Reading
+## Further Reading
 
 - [Java 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
 - [Virtual Threads Guide](https://openjdk.org/jeps/444)
 - [Maven Documentation](https://maven.apache.org/guides/)
 - [SLF4J Manual](https://www.slf4j.org/manual.html)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Areas for enhancement:
 
@@ -330,14 +330,14 @@ Contributions are welcome! Areas for enhancement:
 - [ ] Emoji support
 - [ ] Message threading
 
-## 📄 License
+## License
 
 This project is provided as-is for educational purposes.
 
-## 👤 Author
+## Author
 
 Java Chat Application v2.0.0 - Modernized with Java 21
 
 ---
 
-**Enjoy chatting! 💬**
+**Enjoy chatting!**
