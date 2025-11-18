@@ -55,49 +55,49 @@ chat_app/
 
 ```powershell
 mvn clean compile
-```
+## Features
 
-### Run Tests
+## Requirements
 
-```powershell
+## Project Structure
 mvn test
-```
+## Building
 
-### Package as Executable JAR
+## Running the Application
 
-```powershell
+## Commands
 mvn clean package
-```
+## Configuration
 
-This creates `chat-application-2.0.0.jar` in the `target/` directory with all dependencies included.
+## Architecture
 
-## 🎮 Running the Application
+## Testing
 
-### GUI Server (Recommended)
+## Modern Java 21 Features Used
 
-```powershell
+## Logging
 mvn exec:java -Dexec.mainClass="com.chatapp.ui.ServerUI"
-```
+## Troubleshooting
 
-Or run the packaged JAR:
+## Best Practices Implemented
 
-```powershell
+## Performance
 java -jar target/chat-application-2.0.0.jar
-```
+## Security Considerations
 
-**Steps:**
+## Further Reading
 1. Click "Start Server"
-2. Note the port number displayed
+## Contributing
 3. Share this port with clients
-
+## License
 ### GUI Client
-
-```powershell
-mvn exec:java -Dexec.mainClass="com.chatapp.ui.ClientUI"
-```
-
-**Steps:**
-1. Enter server hostname (default: localhost)
+## Author
+**Enjoy chatting!**
+- Message record creation and formatting
+- Configuration loading and defaults
+- Server lifecycle (start/stop)
+- Client connection and disconnection
+- Auto-closeable resource management
 2. Enter the server port
 3. Choose a unique username
 4. Click "Connect"
