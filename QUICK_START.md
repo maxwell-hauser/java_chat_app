@@ -103,13 +103,13 @@ src/test/java/com/chatapp/
 
 ## Key Features
 
-✨ Multi-client support (50+ concurrent)
-✨ GUI and CLI interfaces
-✨ Real-time messaging
-✨ Unique username enforcement
-✨ Graceful disconnect handling
-✨ Professional logging
-✨ Comprehensive tests
+- Multi-client support (50+ concurrent)
+- GUI and CLI interfaces
+- Real-time messaging
+- Unique username enforcement
+- Graceful disconnect handling
+- Professional logging
+- Comprehensive tests
 
 ## Documentation
 
@@ -118,4 +118,4 @@ src/test/java/com/chatapp/
 - **This Guide**: `QUICK_START.md`
 
 ---
-**Version 2.0.0** | Built with Java 21 ☕
+**Version 2.0.0** | Built with Java 21
